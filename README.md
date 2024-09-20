@@ -20,7 +20,7 @@
 ## 1 - Foundations
 
 <p align="center">
-<img src="https://github.com/Bomays/holbertonschool-higher_level_programming/blob/main/images/python-logo.png" alt="Python" width="120"/>
+<img src="https://github.com/Bomays/holbertonschool-higher_level_programming/blob/main/images/python-logo.png" alt="Python" width="180"/>
 </p>
 
 ### General objectives for project: Python - Hello, World
