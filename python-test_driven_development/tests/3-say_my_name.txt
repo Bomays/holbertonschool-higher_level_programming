@@ -1,0 +1,69 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+# Valid args (strings)
+>>> say_my_name("Dumbo", "Monroe")
+My name is Dumbo Monroe
+
+# Test first_name with spaces
+>>> say_my_name("Leo", "Leon")
+My name is Leo Leon
+
+# Test first_name and last_name (empty string)
+>>> say_my_name("", "")
+My name is  
+
+# Valid first_name and last_name (non-ASCII characters)
+>>> say_my_name("François", "Damien")
+My name is François Damien
+
+# Testing first_name is not a string
+>>> say_my_name(123, "Doe")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+# Testing last_name is not a string
+>>> say_my_name("John", 456)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+# Testing Both first_name and last_name are not strings
+>>> say_my_name(123, 456)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+# Testing Single-character first_name and last_name
+>>> say_my_name("A", "B")
+My name is A B
+
+# Testing first_name or last_name with symbols
+>>> say_my_name("John!", "Doe@")
+My name is John! Doe@
+
+
+# Testing one string only
+>>> say_my_name("John")
+My name is John 
+
+# Testing empty last name
+>>> say_my_name("John", "")
+My name is John 
+
+
+# Testing with empty first name 
+>>> say_my_name("", "Doe")
+My name is  Doe
+
+# testing with special characters
+>>> say_my_name("Nïcôlaï", "Martînez")
+My name is Nïcôlaï Martînez
+
+# testing with a None
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+# testing with no arguments
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'

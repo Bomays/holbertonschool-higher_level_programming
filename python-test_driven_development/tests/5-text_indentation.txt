@@ -1,0 +1,36 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Norma testing with punctuation
+>>> text_indentation("Hello. How are you? I am fine: thank you.") 
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+I am fine:
+<BLANKLINE>
+thank you.
+<BLANKLINE>
+
+# Testing without punctuation
+>>> text_indentation("Hello How are you I am fine thank you") 
+Hello How are you I am fine thank you
+
+# Testing empty text 
+>>> text_indentation("") 
+
+# Testing when not a string 
+>>> text_indentation(123)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+# Testing with spaces at start and end 
+>>> text_indentation("   Hello. How are you?   ") 
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+
+# Testing with None
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
