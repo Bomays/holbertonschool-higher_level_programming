@@ -3,7 +3,7 @@
 $~$
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/f6a03eee-84c5-4a0d-823c-6aaece96c0fb" alt="Python" width="100"/>
+<img src="images/python-logo-only.png" alt="Python" width="100"/>
 </p>
 
 ## General
