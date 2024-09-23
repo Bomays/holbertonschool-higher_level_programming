@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This module defines a list
+"""
+
+
 def lookup(obj):
     """
     Returns a list of available
