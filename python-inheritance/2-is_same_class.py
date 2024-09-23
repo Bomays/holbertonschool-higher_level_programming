@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines a list
+This module checks the class type
 """
 
 
@@ -11,6 +11,5 @@ def is_same_class(obj, a_class):
     otherwise False
     """
     if type(obj) == a_class:
-        return True
-    else:
-        return False
+        return (True)
+    return (False)
