@@ -36,7 +36,7 @@ class Square(Rectangle):
 
     def __str__(self):
         """Method with __str__ that returns a string
-            representation of a square
+        representation of a square
 
         Returns:
             str: informal string representation of a square
