@@ -49,3 +49,30 @@ integer_validator test with no args:
 ... except Exception as e:
 ...     print("[TypeError] two arguments are missing")
 [TypeError] two arguments are missing
+
+
+integer_validator test with float:
+>>> try:
+...     bg.integer_validator("height", 2.4)
+... except Exception as e:
+...     print("[TypeError] age must be an integer")
+[TypeError] age must be an integer
+
+integer_validator test with negative float:
+>>> try:
+...     bg.integer_validator("height", -2.4)
+... except Exception as e:
+...     print("[TypeError] age must be an integer")
+[TypeError] age must be an integer
+
+
+integer_validator test with big number:
+>>> bg.integer_validator("number", 99999955555444)
+
+
+integer_validator test with empty string:
+>>> try:
+...     bg.integer_validator("width", "")
+... except Exception as e:
+...     print("[TypeError] age must be an integer")
+[TypeError] age must be an integer
