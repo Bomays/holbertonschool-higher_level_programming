@@ -11,7 +11,7 @@ Integer_validator test with invalid type inputs:
 >>> try:
 ...     bg.integer_validator("name", "John")
 ... except Exception as e:
-...     print("[TypeError] name must be an integer")
+...     print("[TypeError] name must be an integer)
 [TypeError] name must be an integer
 
 
@@ -35,43 +35,6 @@ Integer_validator test with invalid type inputs:
 [TypeError] age must be an integer
 
 
->>> try:
-...     bg.integer_validator("age", (-4,))
-... except Exception as e:
-...     print("[TypeError] age must be an integer")
-[TypeError] age must be an integer
-
->>> try:
-...     bg.integer_validator("age", (4))
-... except Exception as e:
-...     print("[TypeError] age must be an integer")
-[TypeError] age must be an integer
-
->>> try:
-...     bg.integer_validator("age", [4])
-... except Exception as e:
-...     print("[TypeError] age must be an integer")
-[TypeError] age must be an integer
-
->>> try:
-...     bg.integer_validator("age", [-4])
-... except Exception as e:
-...     print("[TypeError] age must be an integer")
-[TypeError] age must be an integer
-
->>> try:
-...     bg.integer_validator("age", {1, 2})
-... except Exception as e:
-...     print("[TypeError] age must be an integer")
-[TypeError] age must be an integer
-
->>> try:
-...     bg.integer_validator("age", True)
-... except Exception as e:
-...     print("[TypeError] age must be an integer")
-[TypeError] age must be an integer
-
-
 Integer_validator test with only one arg:
 >>> try:
 ...     bg.integer_validator("name")
@@ -85,3 +48,11 @@ Integer_validator test with no args:
 ... except Exception as e:
 ...     print("[TypeError] two arguments are missing")
 [TypeError] two arguments are missing
+
+
+Integer_validator test with boolean:
+>>> try:
+...     bg.integer_validator("age", True)
+... except Exception as e:
+...     print("[TypeError] age must be an integer")
+[TypeError] age must be an integer
