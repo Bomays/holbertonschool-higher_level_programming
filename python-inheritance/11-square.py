@@ -28,7 +28,7 @@ class BaseGeometry:
 
 class Rectangle(BaseGeometry):
     """
-    Subclass inherited from superclass BaseGeometry
+    Subclass inherited for superclass BaseGeometry
     that defines a rectangle
 
     Attributes:
@@ -78,7 +78,7 @@ class Rectangle(BaseGeometry):
 
 class Square(Rectangle):
     """
-    Subclass inherited from rectangle subclass that defines a square
+    Subclass inherited of rectangle subclass that defines a square
 
     Attributes:
         __size(int): size (length) of a square
