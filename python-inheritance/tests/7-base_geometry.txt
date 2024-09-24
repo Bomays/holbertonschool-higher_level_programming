@@ -76,3 +76,11 @@ integer_validator test with empty string:
 ... except Exception as e:
 ...     print("[TypeError] age must be an integer")
 [TypeError] age must be an integer
+
+
+area method test:
+>>> try:
+...     bg.area()
+... except Exception as e:
+...     print("area() is not implemented")
+area() is not implemented
