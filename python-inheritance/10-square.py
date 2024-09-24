@@ -1,79 +1,8 @@
 #!/usr/bin/python3
 """
-This module defines base geometry classes
+A class Square which s a Rectangle heritage which is itself a BaseGeometry Heritage
 """
-
-
-class BaseGeometry:
-    """ Class that defines base of geometry"""
-
-    def integer_validator(self, name, value):
-        """Validates that value is a positive integer
-
-        Args:
-            name(str): name of parameter
-            value(int): value to validate
-
-        Raises:
-            TypeError: if value is not an integer
-            ValueError: if value is less than 0 or equals 0
-        """
-        if isinstance(value, bool):
-            raise TypeError("{} must be an integer".format(name))
-        if not isinstance(value, int):
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
-
-
-class Rectangle(BaseGeometry):
-    """
-    Subclass inherited for superclass BaseGeometry
-    that defines a rectangle
-
-    Attributes:
-        __width(int): width rectangle
-        __height(int): height rectangle
-    """
-
-    def __init__(self, width, height):
-        """Initializing a Rectangle instance
-
-        Args:
-            width(int):  width rectangle
-            height(int): height rectangle
-
-        Raises:
-            TypeError: if value is not an integer
-            ValueError: if value is less than 0 or equal to 0
-        """
-
-        self.integer_validator("width", width)
-        self.__width = width
-
-        self.integer_validator("height", height)
-        self.__height = height
-
-    def area(self):
-        """Method that calculates a rectangle area
-
-        Returns:
-            int: the area of a rectangle
-        """
-        return (self.__width * self.__height)
-
-    def __str__(self):
-        """Method with __str__ that returns a string
-            representation of a rectangle
-
-        Returns:
-            str: informal string representation of a rectangle
-        """
-        return ("[Rectangle] {}/{}".format(self.__width, self.__height))
-
-    def print(self):
-        """Prints the string representation of a rectangle"""
-        print(self.__str__())
+Rectangle = __import__('9-retangle').Rectangle
 
 
 class Square(Rectangle):
