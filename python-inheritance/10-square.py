@@ -61,7 +61,8 @@ class Square(Rectangle):
     """
 
     def __init__(self, size):
-        """Initializing method"""
+        """Initializing method
+        """
         self.integer_validator("size", size)
         super().__init__(size, size)
         """ Initialize Rectangle width and height with size"""
