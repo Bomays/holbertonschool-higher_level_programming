@@ -12,8 +12,8 @@ class Rectangle(BaseGeometry):
         """Initializing method"""
 
         self.integer_validator("width", width)
-        self.__width = width
         self.integer_validator("height", height)
+        self.__width = width
         self.__height = height
 
     def area(self):
@@ -24,7 +24,3 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """Method with __str__ that returns values"""
         return ("[Rectangle] {}/{}".format(self.__width, self.__height))
-
-    def print(self):
-        """Method that prints rectangle values with __str__"""
-        print(self.__str__())
