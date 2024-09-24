@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-A class Square which s a Rectangle heritage which is itself
-a BaseGeometry Heritage
-"""
+"""A class Square which is a Rectangle heritage"""
 Rectangle = __import__('9-retangle').Rectangle
 
 
@@ -35,7 +32,7 @@ class Square(Rectangle):
         Returns:
             int: square area
         """
-        return super().area()
+        return (self.__size * 2)
 
     def __str__(self):
         """Method with __str__ that returns a string
@@ -44,4 +41,4 @@ class Square(Rectangle):
         Returns:
             str: informal string representation of a square
         """
-        return ("[Square] {}/{}".format(self.__size, self.__size))
+        return ("[Rectangle] {}/{}".format(self.__size, self.__size))
