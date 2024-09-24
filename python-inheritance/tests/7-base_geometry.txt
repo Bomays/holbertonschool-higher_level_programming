@@ -3,6 +3,7 @@
 >>> integer_validator = bg.integer_validator
 
 
+
 integer_validator test with valid inputs:
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
@@ -55,32 +56,97 @@ integer_validator test with float:
 >>> try:
 ...     bg.integer_validator("height", 2.4)
 ... except Exception as e:
-...     print("[TypeError] age must be an integer")
-[TypeError] age must be an integer
+...     print("[TypeError] height must be an integer")
+[TypeError] height must be an integer
 
 integer_validator test with negative float:
 >>> try:
 ...     bg.integer_validator("height", -2.4)
 ... except Exception as e:
-...     print("[TypeError] age must be an integer")
-[TypeError] age must be an integer
+...     print("[TypeError] height must be an integer")
+[TypeError] height must be an integer
 
 
 integer_validator test with big number:
 >>> bg.integer_validator("number", 99999955555444)
+
+integer_validator test with negative big number:
+>>> try:
+...     bg.integer_validator("number", -99999955555444)
+... except Exception as e:
+...     print("[ValueError] number must be greater than 0")
+[ValueError] number must be greater than 0
 
 
 integer_validator test with empty string:
 >>> try:
 ...     bg.integer_validator("width", "")
 ... except Exception as e:
-...     print("[TypeError] age must be an integer")
-[TypeError] age must be an integer
+...     print("[TypeError] width must be an integer")
+[TypeError] width must be an integer
 
+
+True bollean test:
+>>> try:
+...     bg.integer_validator("boolean_true", True)
+... except Exception as e:
+...     print("[TypeError] boolean_true must be an integer")
+[TypeError] boolean_true must be an integer
+
+
+false bollean test:
+>>> try:
+...     bg.integer_validator("boolean_false", False)
+... except Exception as e:
+...     print("[TypeError] boolean_false must be an integer")
+[TypeError] boolean_false must be an integer
+
+test with a string representing a number
+>>> try:
+...     bg.integer_validator("string_number", "100")
+... except Exception as e:
+...     print("[TypeError] string_number must be an integer")
+[TypeError] string_number must be an integer
+
+
+test with an empty list:
+>>> try:
+...     bg.integer_validator("list", [])
+... except Exception as e:
+...     print("[TypeError] list must be an integer")
+[TypeError] list must be an integer
+
+
+test with an empty dictionnary:
+>>> try:
+...     bg.integer_validator("dictionnary", {})
+... except Exception as e:
+...     print("[TypeError] dictionnary must be an integer")
+[TypeError] dictionnary must be an integer
+
+
+test with float infinity:
+>>> try:
+...     bg.integer_validator("infinity", float("inf"))
+... except Exception as e:
+...     print("[TypeError] infinity must be an integer")
+[TypeError] infinity must be an integer
+
+test with NaN:
+>>> try:
+...     bg.integer_validator("Nan", float("nan"))
+... except Exception as e:
+...     print("[TypeError] NaN must be an integer")
+[TypeError] NaN must be an integer
 
 area method test:
 >>> try:
 ...     bg.area()
 ... except Exception as e:
-...     print("area() is not implemented")
+...     print(e)
 area() is not implemented
+
+
+Docstring test:
+>>> print(BaseGeometry.__doc__)
+Class that defines base of geometry
