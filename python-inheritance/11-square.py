@@ -1,21 +1,23 @@
 #!/usr/bin/python3
-"""
-This module defines base geometry classes
-"""
+""" This module defines parameters for base geoetry"""
 
 
 class BaseGeometry:
     """ Class that defines base of geometry"""
 
+    def area(self):
+        """Raise exception with a message"""
+        raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
-        """Validates that value is a positive integer
+        """Instance method that validates value
 
         Args:
             name(str): name of parameter
             value(int): value to validate
 
         Raises:
-            TypeError: if value is not an integer
+            TypeError: if value isnot an integer
             ValueError: if value is less than 0 or equals 0
         """
         if isinstance(value, bool):
@@ -28,53 +30,26 @@ class BaseGeometry:
 
 class Rectangle(BaseGeometry):
     """
-    Subclass inherited for superclass BaseGeometry
+    Class inherited from superclass BaseGeometry
     that defines a rectangle
-
-    Attributes:
-        __width(int): width rectangle
-        __height(int): height rectangle
     """
 
     def __init__(self, width, height):
-        """Initializing a Rectangle instance
-
-        Args:
-            width(int):  width rectangle
-            height(int): height rectangle
-
-        Raises:
-            TypeError: if value is not an integer
-            ValueError: if value is less than 0 or equal to 0
-        """
+        """Initializing method"""
 
         self.integer_validator("width", width)
         self.__width = width
-
         self.integer_validator("height", height)
         self.__height = height
 
     def area(self):
-        """Method that calculates a rectangle area
-
-        Returns:
-            int: the area of a rectangle
-        """
+        """Method that calculate rectangle area"""
         return (self.__width * self.__height)
 
     def __str__(self):
-        """Method with __str__ that returns a string
-            representation of a rectangle
-
-        Returns:
-            str: informal string representation of a rectangle
-        """
+        """Method with __str__ that returns values"""
         return ("[Rectangle] {}/{}".format(self.__width, self.__height))
-
-    def print(self):
-        """Prints the string representation of a rectangle"""
-        print(self.__str__())
-
+   
 
 class Square(Rectangle):
     """
@@ -105,7 +80,7 @@ class Square(Rectangle):
         Returns:
             int: square area
         """
-        return super().area()
+        return (self.__size * 2)
 
     def __str__(self):
         """Method with __str__ that returns a string
@@ -114,7 +89,7 @@ class Square(Rectangle):
         Returns:
             str: informal string representation of a square
         """
-        return ("[Square] {}/{}".format(self.__size, self.__size))
+        return ("[Rectangle] {}/{}".format(self.__size, self.__size))
 
     def print(self):
         """Prints the string repr. of a square"""
