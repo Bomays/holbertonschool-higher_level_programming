@@ -5,7 +5,7 @@ This module defines base geometry classes
 
 
 class BaseGeometry:
-    """ Class that defines base of geometry"""
+    """Class that defines base of geometry"""
 
     def area(self):
         """Method that calculates a rectangle area
