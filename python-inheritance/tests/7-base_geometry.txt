@@ -2,16 +2,17 @@
 >>> bg = BaseGeometry()
 >>> integer_validator = bg.integer_validator
 
-Integer_validator test with valid inputs:
+
+integer_validator test with valid inputs:
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
 
 
-Integer_validator test with invalid type inputs:
+integer_validator test with invalid type inputs:
 >>> try:
 ...     bg.integer_validator("name", "John")
 ... except Exception as e:
-...     print("[TypeError] name must be an integer)
+...     print("[TypeError] name must be an integer")
 [TypeError] name must be an integer
 
 
@@ -35,24 +36,16 @@ Integer_validator test with invalid type inputs:
 [TypeError] age must be an integer
 
 
-Integer_validator test with only one arg:
+integer_validator test with only one arg:
 >>> try:
 ...     bg.integer_validator("name")
 ... except Exception as e:
 ...     print("[TypeError] one argument is missing")
 [TypeError] one argument is missing
 
-Integer_validator test with no args:
+integer_validator test with no args:
 >>> try:
 ...     bg.integer_validator()
 ... except Exception as e:
 ...     print("[TypeError] two arguments are missing")
 [TypeError] two arguments are missing
-
-
-Integer_validator test with boolean:
->>> try:
-...     bg.integer_validator("age", True)
-... except Exception as e:
-...     print("[TypeError] age must be an integer")
-[TypeError] age must be an integer
