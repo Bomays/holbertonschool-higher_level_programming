@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-A class Square which s a Rectangle heritage which is itself a BaseGeometry Heritage
+A class Square which s a Rectangle heritage which is itself
+a BaseGeometry Heritage
 """
 Rectangle = __import__('9-retangle').Rectangle
 
