@@ -18,8 +18,6 @@ class BaseGeometry:
             TypeError: if value is not an integer
             ValueError: if value is less than 0 or equals 0
         """
-        if isinstance(value, bool):
-            raise TypeError("{} must be an integer".format(name))
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
@@ -42,15 +40,10 @@ class Rectangle(BaseGeometry):
         Args:
             width(int):  width rectangle
             height(int): height rectangle
-
-        Raises:
-            TypeError: if value is not an integer
-            ValueError: if value is less than 0 or equal to 0
         """
 
         self.integer_validator("width", width)
         self.__width = width
-
         self.integer_validator("height", height)
         self.__height = height
 
@@ -88,11 +81,7 @@ class Square(Rectangle):
         """Initializing square instance
 
         Args:
-        size(int): zie of a square
-
-        Raises:
-            TypeError: if value is not an integer
-            ValueError: if value is less than 0 or equal to 0
+            size(int): zie of a square
         """
         self.integer_validator("size", size)
         self.__size = size
@@ -105,7 +94,7 @@ class Square(Rectangle):
         Returns:
             int: square area
         """
-        return (self.__size * 2)
+        return (self.__size ** 2)
 
     def __str__(self):
         """Method with __str__ that returns a string
@@ -115,3 +104,4 @@ class Square(Rectangle):
             str: informal string representation of a square
         """
         return ("[Rectangle] {}/{}".format(self.__size, self.__size))
+    
