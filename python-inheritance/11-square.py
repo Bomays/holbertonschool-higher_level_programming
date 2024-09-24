@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines base geometry
+This module defines base geometry classes
 """
 
 
@@ -8,7 +8,7 @@ class BaseGeometry:
     """ Class that defines base of geometry"""
 
     def integer_validator(self, name, value):
-        """Instance method that validates value
+        """Validates that value is a positive integer
 
         Args:
             name(str): name of parameter
@@ -30,10 +30,23 @@ class Rectangle(BaseGeometry):
     """
     Subclass inherited from superclass BaseGeometry
     that defines a rectangle
+
+    Attributes:
+        __width(int): width rectangle
+        __height(int): height rectangle
     """
 
     def __init__(self, width, height):
-        """Initializing method"""
+        """Initializing a Rectangle instance
+
+        Args:
+            width(int):  width rectangle
+            height(int): height rectangle
+
+        Raises:
+            TypeError: if value is not an integer
+            ValueError: if value is less than 0 or equal to 0
+        """
 
         self.integer_validator("width", width)
         self.__width = width
@@ -42,26 +55,44 @@ class Rectangle(BaseGeometry):
         self.__height = height
 
     def area(self):
-        """Method that calculate rectangle area"""
+        """Method that calculates a rectangle area
+
+        Returns:
+            int: the area of a rectangle
+        """
         return (self.__width * self.__height)
 
     def __str__(self):
-        """Method with __str__ that returns values"""
+        """Method with __str__ that returns a string
+            representation of a rectangle
+
+        Returns:
+            str: informal string representation of a rectangle
+        """
         return ("[Rectangle] {}/{}".format(self.__width, self.__height))
 
     def print(self):
-        """Method that prints rectangle values with __str__"""
+        """Prints the string representation of a rectangle"""
         print(self.__str__())
 
 
 class Square(Rectangle):
     """
-    Subclass inherited from rectangle subclass BaseGeometry
-    that defines a square
+    Subclass inherited from rectangle subclass that defines a square
+
+    Attributes:
+        __size(int): size (length) of a square
     """
 
     def __init__(self, size):
-        """Initializing method
+        """Initializing square instance
+
+        Args:
+        size(int): zie of a square
+
+        Raises:
+            TypeError: if value is not an integer
+            ValueError: if value is less than 0 or equal to 0
         """
         self.integer_validator("size", size)
         self.__size = size
@@ -69,14 +100,21 @@ class Square(Rectangle):
         """ Initialize Rectangle width and height with size"""
 
     def area(self):
-        """Method that calculate rectangle area"""
+        """Calculates square area
+
+        Returns:
+            int: square area
+        """
         return super().area()
-        """Return that use area method from Rectangle"""
 
     def __str__(self):
-        """Method with __str__ that returns square values"""
+        """Returns  a string representation of a square
+
+        Returns:
+            str: Informal string repr. of a square
+        """
         return ("[Square] {}/{}".format(self.__size, self.__size))
 
     def print(self):
-        """Method that prints square values with __str__"""
+        """Prints the string repr. of a square"""
         print(self.__str__())
