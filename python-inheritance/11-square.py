@@ -27,7 +27,3 @@ class Square(Rectangle):
             str: informal string representation of a square
         """
         return "[Rectangle] {}/{}".format(self.__size, self.__size)
-
-    def print(self):
-        """Method that prints the string representation of the square """
-        print(self.__str__())
