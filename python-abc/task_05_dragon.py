@@ -20,7 +20,7 @@ class FlyMixin:
 class Dragon(SwimMixin, FlyMixin):
     """Inherited class for dragon roar"""
 
-    def __init__(self, name):
+    def __init__(self, name="draco"):
         """Initialize dragon with name"""
         self.name = name
 
