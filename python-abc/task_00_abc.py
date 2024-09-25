@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Module Animal_sound using abstract class and method to defines the sound of a dog or a cat"""
-
+"""Module Animal_sound using abstract class and method
+to defines the sound of a dog or a cat"""
 from abc import ABC, abstractmethod
 
 
