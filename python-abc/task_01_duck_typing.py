@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module Animal_sound using abstract class and methods
 to defines the sound of a dog or a cat"""
+import math
 from abc import ABC, abstractmethod
 
 
@@ -20,10 +21,10 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return 3.14 * (self.radius**2)
+        return math.pi * (self.radius**2)
 
     def perimeter(self):
-        return 2 * 3.14 * self.radius
+        return 2 * math.pi * self.radius
 
 
 class Rectangle(Shape):
