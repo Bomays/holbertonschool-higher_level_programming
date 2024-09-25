@@ -21,7 +21,8 @@ class Circle(Shape):
     def __init__(self, radius):
         if radius < 0:
             raise ValueError
-        self.radius = radius
+        else:
+            self.radius = radius
 
     def area(self):
         return math.pi * (self.radius**2)
@@ -34,8 +35,9 @@ class Rectangle(Shape):
     def __init__(self, width, height):
         if width < 0 or height < 0:
             raise ValueError
-        self.width = width
-        self.height = height
+        else:
+            self.width = width
+            self.height = height
 
     def area(self):
         return self.width * self.height
