@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Module Animal_sound using abstract class and methods
-to defines the sound of a dog or a cat"""
+"""Module Shape that permit to calculate and print
+Rectangle and Circle Area and perimeter"""
 import math
 from abc import ABC, abstractmethod
 
