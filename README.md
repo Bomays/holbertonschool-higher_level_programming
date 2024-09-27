@@ -3,9 +3,6 @@
 # High level programming learning courses
 >  Python / SQL / RESTful API / HTML / CSS / JavaScript / ES6 / DOM manip
 
-<br>
-
-> Current Repository : holbertonschool-higher_level_programming
 
 &nbsp;
 
@@ -26,6 +23,28 @@
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
+&nbsp;
+
+
+## Table of learning courses objectives Contents  
+<br>
+
+> Current Repository
+
+
+- [1 - Python - Hello, World](#1---general-objectives-for-project-python---hello-world)
+- [2 - Python - if/else, loops, functions](#2---general-objectives-for-project-python---ifelse-loops-functions)
+- [3 - Python - import and modules](#3---general-objectives-for-project-python---import-and-modules)
+- [4 - Python - data structures](#4---general-objectives-for-project-python---data-structures)
+- [5 - Python - More Data Structures > Set, Dictionary](#5---general-objectives-for-project-python---more-data-structures--set-dictionary)
+- [6 - Python - Exceptions](#6---general-objectives-for-project-python---exceptions)
+- [7 - Python - Test-driven development](#7---general-objectives-for-project-python---test-driven-development)
+- [8 - Python - Classes and Objects](#8---general-objectives-for-project-python---classes-and-objects)
+- [9 - Python - More Classes and Objects](#9---general-objectives-for-project-python---more-classes-and-objects)
+- [10 - Python - Inheritance](#10---general-objectives-for-project-python---inheritance)
+- [11 - Python OOP - Abstract Class, Interface, Subclassing](#11---general-objectives-for-project-python-oop---abstract-class-interface-subclassing)
+
+&nbsp;
 
 &nbsp;
 
@@ -47,30 +66,19 @@ The project emphasizes **scalability, robustness, and flexibility**,
 ensuring students are well-prepared for technological advancements in their future careers. 
 
  ```Authors: Louis Genty, Clément Callejon, David Vaucheret, Nicolas Martinez```
-$~$
- 
-&nbsp;
 
-## Table of learning courses objectives Contents  
+ &nbsp;
 
-- [1 - Python - Hello, World](#1---general-objectives-for-project-python---hello-world)
-- [2 - Python - if/else, loops, functions](#2---general-objectives-for-project-python---ifelse-loops-functions)
-- [3 - Python - import and modules](#3---general-objectives-for-project-python---import-and-modules)
-- [4 - Python - data structures](#4---general-objectives-for-project-python---data-structures)
-- [5 - Python - More Data Structures > Set, Dictionary](#5---general-objectives-for-project-python---more-data-structures--set-dictionary)
-- [6 - Python - Exceptions](#6---general-objectives-for-project-python---exceptions)
-- [7 - Python - Test-driven development](#7---general-objectives-for-project-python---test-driven-development)
-- [8 - Python - Classes and Objects](#8---general-objectives-for-project-python---classes-and-objects)
-- [9 - Python - More Classes and Objects](#9---general-objectives-for-project-python---more-classes-and-objects)
-- [10 - Python - Inheritance](#10---general-objectives-for-project-python---inheritance)
-- [11 - Python OOP - Abstract Class, Interface, Subclassing](#11---general-objectives-for-project-python-oop---abstract-class-interface-subclassing)
+ &nbsp;
 
-&nbsp;
+ &nbsp;
 
+ ## Courses part objectives
 
-<p align="center">
+ <p align="center">
 <img src="https://github.com/Bomays/holbertonschool-higher_level_programming/blob/9441bc9f0855463ba8b62e4f2bc7e68090566757/images/python-logo-only.png" alt="Python" width="72"/>
 </p>
+
 
 &nbsp;
 
