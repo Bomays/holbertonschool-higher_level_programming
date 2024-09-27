@@ -65,17 +65,17 @@ software development environments.
 The project emphasizes **scalability, robustness, and flexibility**,  
 ensuring students are well-prepared for technological advancements in their future careers. 
 
- ```Authors: Louis Genty, Clément Callejon, David Vaucheret, Nicolas Martinez```
+<span style="color:#26B260;">Authors: Louis Genty, Clément Callejon, David Vaucheret, Nicolas Martinez</span>
 
- &nbsp;
+&nbsp;
 
- &nbsp;
+&nbsp;
 
- &nbsp;
+&nbsp;
 
- ## Courses part objectives
+## Courses part objectives
 
- <p align="center">
+<p align="center">
 <img src="https://github.com/Bomays/holbertonschool-higher_level_programming/blob/9441bc9f0855463ba8b62e4f2bc7e68090566757/images/python-logo-only.png" alt="Python" width="72"/>
 </p>
 
