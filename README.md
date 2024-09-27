@@ -21,22 +21,16 @@
 ![openapi initiative](https://img.shields.io/badge/openapiinitiative-%23000000.svg?style=for-the-badge&logo=openapiinitiative&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
 
 &nbsp;
 
 
-&nbsp;
-
-### Table of courses contents  
-
-- [Python - Hello, World](#General-objectives-for-project:-Python--Hello,-World)
-- [Python - if/else, loops, functions](#General-objectives-for-project:-Python--if/else,-loops,-functions)
-
-
-
-
-
-## Parallel project > High Level programming project HBnB
+# Parallel project > High Level programming project HBnB
 <a href="#HBnB-Evolution-Project-Overview">See HBnB Evolution Project Overview</a>
 
 $~$
@@ -55,17 +49,32 @@ ensuring students are well-prepared for technological advancements in their futu
  ```Authors: Louis Genty, Clément Callejon, David Vaucheret, Nicolas Martinez```
 $~$
  
-#
+&nbsp;
 
+## Table of learning courses objectives Contents  
 
+- [1 - Python - Hello, World](#1---general-objectives-for-project-python---hello-world)
+- [2 - Python - if/else, loops, functions](#2---general-objectives-for-project-python---ifelse-loops-functions)
+- [3 - Python - import and modules](#3---general-objectives-for-project-python---import-and-modules)
+- [4 - Python - data structures](#4---general-objectives-for-project-python---data-structures)
+- [5 - Python - More Data Structures > Set, Dictionary](#5---general-objectives-for-project-python---more-data-structures--set-dictionary)
+- [6 - Python - Exceptions](#6---general-objectives-for-project-python---exceptions)
+- [7 - Python - Test-driven development](#7---general-objectives-for-project-python---test-driven-development)
+- [8 - Python - Classes and Objects](#8---general-objectives-for-project-python---classes-and-objects)
+- [9 - Python - More Classes and Objects](#9---general-objectives-for-project-python---more-classes-and-objects)
+- [10 - Python - Inheritance](#10---general-objectives-for-project-python---inheritance)
+- [11 - Python OOP - Abstract Class, Interface, Subclassing](#11---general-objectives-for-project-python-oop---abstract-class-interface-subclassing)
 
-# 1 - Foundations courses
+&nbsp;
+
 
 <p align="center">
-<img src="https://github.com/Bomays/holbertonschool-higher_level_programming/blob/main/images/python-logo.png" alt="Python" width="180"/>
+<img src="https://github.com/Bomays/holbertonschool-higher_level_programming/blob/9441bc9f0855463ba8b62e4f2bc7e68090566757/images/python-logo-only.png" alt="Python" width="72"/>
 </p>
 
-### General objectives for project: Python - Hello, World
+&nbsp;
+
+### 1 - General objectives for project: Python - Hello, World 
 ```
 - How to use the Python interpreter
 - How to print text and variables using print
@@ -74,7 +83,7 @@ $~$
 - What is the official Python coding style and how to check your code with pycodestyle
 ```
 
-### General objectives for project: Python - if/else, loops, functions
+### 2 - General objectives for project: Python - if/else, loops, functions
 ```
 - Why indentation is so important in Python
 - How to use the if, if ... else statements
@@ -92,7 +101,7 @@ $~$
 - What are the arithmetic operators and how to use them
 ```
 
-### General objectives for project: Python - import & modules
+### 3 - General objectives for project: Python - import and modules
 ```
 - Why Python programming is awesome
 - How to import functions from another file
@@ -103,7 +112,7 @@ $~$
 - How to use command line arguments with your Python programs
 ```
 
-### General objectives for project: Python-data_structures
+### 4 - General objectives for project: Python - data structures
 ```
 - What are lists and how to use them
 - What are the differences and similarities between strings and lists
@@ -118,7 +127,7 @@ $~$
 - What is the del statement and how to use it
 ```
 
-### General objectives for project: Python - More Data Structures > Set, Dictionary
+### 5 - General objectives for project: Python - More Data Structures > Set, Dictionary
 ```
 - Why Python programming is awesome
 - What are sets and how to use them
@@ -133,7 +142,7 @@ $~$
 - What are the map, reduce and filter functions
 ```
 
-### General objectives for project: Python - Exceptions
+### 6 - General objectives for project: Python - Exceptions
 ```
 - Why Python programming is awesome
 - What’s the difference between errors and exceptions
@@ -145,7 +154,7 @@ $~$
 - When do we need to implement a clean-up action after an exception
 ```
 
-### General objectives for project: Python - Test-driven development
+### 7 - General objectives for project: Python - Test-driven development
 ```
 - Why Python programming is awesome
 - What’s an interactive test
@@ -156,7 +165,7 @@ $~$
 - How to find edge cases
 ```
 
-### General objectives for project: Python - Classes and Objects
+### 8 - General objectives for project: Python - Classes and Objects
 ```
 - What is OOP
 - “first-class everything”
@@ -179,7 +188,7 @@ $~$
 - How to use the getattr function
 ```
 
-### Python - More Classes and Objects
+### 9 - General objectives for project: Python - More Classes and Objects
 ```
 - Why Python programming is awesome
 - What is OOP
@@ -209,7 +218,7 @@ $~$
 - How to use the getattr function
 ```
 
-### Python - Inheritance
+### 10 - General objectives for project: Python - Inheritance
 ```
 - What is a superclass, baseclass or parentclass
 - What is a subclass
@@ -224,7 +233,8 @@ $~$
 - What are, when and how to use isinstance, issubclass, type and super built-in functions
 ```
 
-### Python OOP - Abtract Class, Interface, Subclassing
+
+### 11 - General objectives for project: Python OOP - Abstract Class, Interface, Subclassing
 ```
 - Abstract Classes:
   Understand and apply abstract classes to
