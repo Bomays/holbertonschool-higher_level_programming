@@ -1,23 +1,55 @@
+
 # holbertonschool-higher_level_programming
 
 ![Windows 11](https://img.shields.io/badge/Windows%2011-%230079d5.svg?style=for-the-badge&logo=Windows%2011&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-
 ![Vim](https://img.shields.io/badge/VIM-%2311AB00.svg?style=for-the-badge&logo=vim&logoColor=white)
 ![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![openapi initiative](https://img.shields.io/badge/openapiinitiative-%23000000.svg?style=for-the-badge&logo=openapiinitiative&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
 
+&nbsp;
 
-### High level programming learning courses
+&nbsp;
+
+## High level programming learning courses
 >Python / SQL / RESTful API / HTML / CSS / JavaScript / ES6 / DOM manip
+
+&nbsp;
+### Table of courses contents  
+
+- [Python - Hello, World](#General objectives for project: Python - Hello, World)
+
+## Parallel project > High Level programming project HBnB
+<a href="#HBnB-Evolution-Project-Overview">See HBnB Evolution Project Overview</a>
+
+$~$
+
+> See Repository > Soon available!
+
+&nbsp;
+
+The project equips students with a structured pathway to **develop and deploy a full-stack application**  
+using modern tools and methodologies.    
+Each stage introduces more complex technologies and concepts, preparing students for professional  
+software development environments.  
+The project emphasizes **scalability, robustness, and flexibility**,  
+ensuring students are well-prepared for technological advancements in their future careers. 
+
+ ```Authors: Louis Genty, Clément Callejon, David Vaucheret, Nicolas Martinez```
+$~$
  
 #
 
 
 
-## 1 - Foundations
+# 1 - Foundations courses
 
 <p align="center">
 <img src="https://github.com/Bomays/holbertonschool-higher_level_programming/blob/main/images/python-logo.png" alt="Python" width="180"/>
@@ -166,3 +198,127 @@
 - How does Python find the attributes of an object or class
 - How to use the getattr function
 ```
+
+### Python - Inheritance
+```
+- What is a superclass, baseclass or parentclass
+- What is a subclass
+- How to list all attributes and methods of a class or instance
+- When can an instance have new attributes
+- How to inherit class from another
+- How to define a class with multiple base classes
+- What is the default class every class inherit from
+- How to override a method or attribute inherited from the base class
+- Which attributes or methods are available by heritage to subclasses
+- What is the purpose of inheritance
+- What are, when and how to use isinstance, issubclass, type and super built-in functions
+```
+
+### Python OOP - Abtract Class, Interface, Subclassing
+```
+- Abstract Classes:
+  Understand and apply abstract classes to
+  define common interfaces while enforcing certain levels of class completeness.
+
+
+- Interfaces and Duck Typing:
+  Grasp the concept of interfaces and duck typing to ensure that objects adhere
+  to a specific contract or protocol.
+
+
+- Subclassing Standard Base Classes:
+  Learn to extend standard base classes like lists, dictionaries,
+  and iterators to create custom data structures with specialized behavior.
+
+
+- Method Overriding:
+  Employ method overriding to alter or enhance the behavior of base class methods.
+
+
+- Multiple Inheritance:
+  Understand and apply multiple inheritance to form complex relationships between classes.
+
+
+- Mixins:
+  Utilize mixins to compose behavior across unrelated classes.
+```
+
+&nbsp;
+
+&nbsp;
+
+# HBnB Evolution Project Overview
+<a name="HBnB Evolution Project Overview"></a>
+
+
+> See Repository > Soon available!
+
+
+## Project Description
+
+
+The HBnB Evolution project is a comprehensive educational initiative designed to guide students through\
+the development of a simplified AirBnB-like application. 
+
+Spanning four stages, the project progresses from backend setup to full-stack integration and deployment,\
+using **Docker** and various modern development practices.
+
+An API-first approach is prioritized, focusing on establishing a robust and scalable API before frontend implementation.
+
+&nbsp;
+
+## Architectural Approach and Methodology
+
+**The architecture of HBnB Evolution employs a three-layered approach:**
+
+***Service Layer:***\
+Manages all API endpoints, serving as the interface between the client and business logic.\
+Business Logic Layer: Houses models and business rules, handling data logic, validation, and computations.\
+
+***Persistence Layer:***\
+Oversees data storage and retrieval, initially using simple class implementations with interfaces for adaptability,\
+allowing for easy transition to more complex storage solutions.\
+
+**Stage 1:**\
+*Backend Setup and Basic Functionality*\
+<br>
+*Objectives:*\
+- Develop a UML model and implement backend functionality using Flask.\
+- Create data persistence using simple classes, facilitated by interfaces for future flexibility.\
+- Develop RESTful API endpoints.\
+- Containerize the API using Docker.  
+<br>
+*Key Entities and Attributes:*\
+- User:\
+Attributes include id (UUID4), email (String), first_name (String), last_name (String),
+created_at (DateTime), and updated_at (DateTime).  
+<br>
+- Place:\
+Attributes include id (UUID4), host_id (UUID4 referencing User), name (String), description (String), number_of_rooms (Integer), number_of_bathrooms (Integer), max_guests (Integer), price_per_night (Float), latitude (Float), longitude (Float), city_id (UUID4 referencing City), amenity_ids (List of UUIDs referencing Amenities), created_at (DateTime), and updated_at (DateTime).
+<br>
+- City:\
+Attributes include id (UUID4), name (String), country_code (String referencing Country), created_at (DateTime), and updated_at (DateTime).  
+- Country: Attributes include code (ISO 3166-1 alpha-2), name (String). This entity is preloaded and read-only.  
+- Review: Attributes include id (UUID4), place_id (UUID4 referencing Place), user_id (UUID4 referencing User), rating (Integer),  
+comment (String), created_at (DateTime), and updated_at (DateTime).
+
+**Stage 2:**\
+*Database Integration and Authentication*\
+<br>
+Objectives:\
+- Transition to ORM-based interactions using SQLAlchemy, moving from simple storage to SQLite for development and PostgreSQL for production.  
+- Introduce JWT-based authentication to secure API endpoints.  
+- Update Docker configurations to include a production database and develop Docker Compose scripts for effective deployment.
+<br>
+**Stage 3:**\
+*Frontend Development*
+Objectives:\
+- Develop the frontend using HTML, CSS, and JavaScript for dynamic interaction with the backend.  
+- Dockerize the frontend using Nginx to efficiently manage static file serving and API requests.  
+<br>
+**Stage 4:**\
+*Full System Deployment*
+Objectives:\
+- Use Docker Compose for deploying multiple containers, including frontend, backend, and database services.  
+- Set up Nginx for load balancing and ensure secure and scalable deployments through public and private networking configurations.  
+ 
