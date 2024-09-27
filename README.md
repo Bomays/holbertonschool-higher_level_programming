@@ -1,5 +1,13 @@
 
-# holbertonschool-higher_level_programming
+
+# High level programming learning courses
+>  Python / SQL / RESTful API / HTML / CSS / JavaScript / ES6 / DOM manip
+
+<br>
+
+> Current Repository : holbertonschool-higher_level_programming
+
+&nbsp;
 
 ![Windows 11](https://img.shields.io/badge/Windows%2011-%230079d5.svg?style=for-the-badge&logo=Windows%2011&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
@@ -16,15 +24,17 @@
 
 &nbsp;
 
-&nbsp;
-
-## High level programming learning courses
->Python / SQL / RESTful API / HTML / CSS / JavaScript / ES6 / DOM manip
 
 &nbsp;
+
 ### Table of courses contents  
 
-- [Python - Hello, World](#General objectives for project: Python - Hello, World)
+- [Python - Hello, World](#General-objectives-for-project:-Python--Hello,-World)
+- [Python - if/else, loops, functions](#General-objectives-for-project:-Python--if/else,-loops,-functions)
+
+
+
+
 
 ## Parallel project > High Level programming project HBnB
 <a href="#HBnB-Evolution-Project-Overview">See HBnB Evolution Project Overview</a>
