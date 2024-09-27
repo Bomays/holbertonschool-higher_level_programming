@@ -7,7 +7,11 @@ class Square(Rectangle):
     """Subclass inherited of rectangle subclass that defines a square"""
 
     def __init__(self, size):
-        """Initializing square instance"""
+        """Initializing square instance
+
+        Args:
+            size (int): height and width square
+        """
 
         self.integer_validator("size", size)
         self.__size = size
@@ -19,11 +23,3 @@ class Square(Rectangle):
             int: square area
         """
         return self.__size ** 2
-
-    def __str__(self):
-        """Method with __str__ that returns a string
-            representation of a square
-        Returns:
-            str: informal string representation of a square
-        """
-        return "[Rectangle] {}/{}".format(self.__size, self.__size)
