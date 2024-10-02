@@ -1,49 +1,23 @@
 #!/usr/bin/python3
-"""This module writes an object to a json textfile
-using 'with' statement"""
+"""This module  adds all arguments to a Python list,
+and then save them to a file, and create it if does not
+already exists"""
 
 
-
-import json
 import sys
 
 
-def load_from_json_file(filename):
-    """
-    Create Object from JSON file
-
-    Args:
-        filename: the json text file
-    """
-
-    with open(filename, mode="r", encoding='utf-8') as f:
-        my_obj = json.load(f) 
-        """add: (f, object_pairs_hook=OrderedDict) to keep order"""
-    return my_obj
+load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
+save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
 
 
-def save_to_json_file(my_obj, filename):
-    """
-    Converts JSON string representation to an object
+filename = "add_item.json"
 
-    Args:
-        my_obj: the python object to serialize in a json text file
+try:
+    items = load_from_json_file(filename)
+except (FileNotFoundError, ValueError):
+    items = []
 
-    Returns:
-       filename: the json text file
-    """
+items.extend(sys.argv[1:])
 
-    with open(filename, mode="w", encoding='utf-8') as f:
-        json.dump(my_obj, f)
-
-if __name__ == "__main__":
-    filename = "add_item.json"
-
-    try:
-        items = load_from_json_file(filename)
-    except FileNotFoundError or json.JSONDecodeError:
-        items = []
-
-    items.extend(sys.argv[1:])
-
-    save_to_json_file(items, filename)
+save_to_json_file(items, filename)
