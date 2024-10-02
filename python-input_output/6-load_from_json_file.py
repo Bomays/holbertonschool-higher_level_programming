@@ -15,7 +15,4 @@ def load_from_json_file(filename):
     """
 
     with open(filename, mode="r", encoding='utf-8') as f:
-        my_obj = json.load(f) 
-        """from collections import OrderedDict
-        add: (f, object_pairs_hook=OrderedDict) >>> to keep order"""
-    return my_obj
+        return json.load(f)
