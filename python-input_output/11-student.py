@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""This module defines a class student defining a student"""
-
-
-import sys
-import json
+"""This module defines a class student defining a student object"""
 
 
 class Student:
@@ -27,6 +23,7 @@ class Student:
             return self.__dict__
 
     def reload_from_json(self, json):
-        """ Replaces all attributes of the Student instance"""
+        """ Replaces all attributes of the Student instanc
+        with values from dic. json"""
         for key, value in json.items():
             setattr(self, key, value)
