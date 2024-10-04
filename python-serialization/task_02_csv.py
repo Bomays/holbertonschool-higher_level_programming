@@ -13,6 +13,7 @@ def convert_csv_to_json(csv_file, json_file="data.json"):
     """Method that converts csv data to json easy reading file,
      using DictReader to read csv data as a dictionnary """
     if not os.path.exists(csv_file):
+        print("Error: {} not found".format(csv_file))
         return False
 
     data = {}
@@ -27,9 +28,15 @@ def convert_csv_to_json(csv_file, json_file="data.json"):
                 data[keys] = rows
                 """stocks each rows as values in dictionnary"""
 
+    except (OSError) as e:
+        print("Error while readind {} ".format(e))
+        return False
+    
+    try:
         with open(json_file, mode="w", encoding="utf-8")as jsonf:
             json.dump(data, jsonf, indent=4)
             return True
 
-    except (FileNotFoundError, OSError, EOFError) as e:
+    except (OSError) as e:
+        print("json file writing error : {}".format(e))
         return False
