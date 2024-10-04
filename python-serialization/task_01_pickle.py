@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-"""Modue that serializes and deserializes custom Python
-objects using the pickle module."""
+"""Module that serializes and deserializes custom Python
+objects using the pickle module wich works with binary data,
+and OS module which is a file and directory, process
+and shell cmd module manager"""
 
 
+import os
 import pickle
 
 
@@ -26,8 +29,15 @@ class CustomObject:
         """Class method that takes a filename as parameter
         and load and return an instance of the CustomObject from
         the provided filename using PICKLE"""
-        with open(filename, mode="rb") as f:
-            return pickle.load(f)
+        if not os.path.exists(filename):
+            print("Error: {} missing".format(filename))
+            return None
+
+        try:
+            with open(filename, mode="rb") as f:
+                return pickle.load(f)
+        except (pickle.UnpicklingError, OSError, EOFError) as e:
+            print("Error while Unpickling: {}".format(e))
 
     def display(self):
         """Display method that prints out the object’s attributes """
