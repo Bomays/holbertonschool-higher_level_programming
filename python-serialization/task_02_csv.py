@@ -6,21 +6,31 @@ format (JSON) using serialization techniques"""
 
 import csv
 import json
+import os
 
 
 def convert_csv_to_json(csv_file, json_file="data.json"):
-    """Method that converts csv data to json easy readinf file,
+    """Method that converts csv data to json easy reading file,
      using DictReader to read csv data as a dictionnary """
-    data = {}
-    with open(csv_file, encoding="utf-8") as csvf:
-        csvReader = csv.DictReader(csvf)
+    if not os.path.exists(csv_file):
+        print("Error: {} missing".format(csv_file))
+        return False
 
-        for rows in csvReader:
-            """iterating each rows"""
-            keys = rows['name']
-            """sets a primary key for each rows"""
-            data[keys] = rows
-            """stocks each rows as values in dictionnary"""
+    else:
+        data = {}
+        with open(csv_file, encoding="utf-8") as csvf:
+            csvReader = csv.DictReader(csvf)
 
-    with open(json_file, mode="w", encoding="utf-8")as jsonf:
-        json.dump(data, jsonf)
+            for rows in csvReader:
+                """iterating each rows"""
+                keys = rows['name']
+                """sets a primary key for each rows"""
+                data[keys] = rows
+                """stocks each rows as values in dictionnary"""
+    try:
+        with open(json_file, mode="w", encoding="utf-8")as jsonf:
+            json.dump(data, jsonf)
+            return True
+
+    except (OSError, EOFError) as e:
+        print("Error while Serialize: {}".format(e))
