@@ -5,7 +5,6 @@ format to JSON"""
 
 
 import xml.etree.ElementTree as ET
-import json
 
 
 def serialize_to_xml(dictionary, filename):
