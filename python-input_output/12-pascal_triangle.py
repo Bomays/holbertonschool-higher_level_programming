@@ -12,6 +12,8 @@ def pascal_triangle(n):
     Returns:
         List of list representing a pascal triangle
     """
+    if n <= 0:
+        return []
 
     triangle = [[1]]
 
