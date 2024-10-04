@@ -13,7 +13,7 @@ def pascal_triangle(n):
         List of list representing a pascal triangle
     """
 
-    triangle = [[]]
+    triangle = [[1]]
 
     for i in range(1, n):
         row = [1]
