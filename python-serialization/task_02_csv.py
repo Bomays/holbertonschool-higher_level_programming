@@ -16,8 +16,8 @@ def convert_csv_to_json(csv_file, json_file="data.json"):
         print("Error: {} missing".format(csv_file))
         return False
 
-    else:
-        data = {}
+    data = {}
+    try:
         with open(csv_file, encoding="utf-8") as csvf:
             csvReader = csv.DictReader(csvf)
 
@@ -27,7 +27,7 @@ def convert_csv_to_json(csv_file, json_file="data.json"):
                 """sets a primary key for each rows"""
                 data[keys] = rows
                 """stocks each rows as values in dictionnary"""
-    try:
+
         with open(json_file, mode="w", encoding="utf-8")as jsonf:
             json.dump(data, jsonf)
             return True
