@@ -32,6 +32,6 @@ def convert_csv_to_json(csv_file, json_file="data.json"):
             json.dump(data, jsonf)
             return True
 
-    except (OSError, EOFError) as e:
+    except (FileNotFoundError, OSError, EOFError) as e:
         print("Error while Serialize: {}".format(e))
         return False
