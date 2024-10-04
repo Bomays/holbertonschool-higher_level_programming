@@ -28,7 +28,7 @@ def convert_csv_to_json(csv_file, json_file="data.json"):
                 """stocks each rows as values in dictionnary"""
 
         with open(json_file, mode="w", encoding="utf-8")as jsonf:
-            json.dump(data, jsonf)
+            json.dump(data, jsonf, indent=4)
             return True
 
     except (FileNotFoundError, OSError, EOFError) as e:
