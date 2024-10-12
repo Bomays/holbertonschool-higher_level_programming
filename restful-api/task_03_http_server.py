@@ -24,7 +24,7 @@ class MyFirstServer(http.server.BaseHTTPRequestHandler):
 
             data = {"name": "John", "age": 30, "city": "New York"}
             self.wfile.write(json.dumps(data).encode("utf-8"))
-            self.wfile.flush() 
+            self.wfile.flush()
             """ensure to send data direcly after self.wfile.write
             call by flushing > must avoid some BrokenPipeError
             """
@@ -39,15 +39,29 @@ class MyFirstServer(http.server.BaseHTTPRequestHandler):
             self.wfile.write(message.encode("utf-8"))
             self.wfile.flush()
 
+        elif self.path == "/info":
+            """/info endpoint handling"""
+            self.send_response(200)
+            self.send_header("content-type", "application/json")
+            self.end_headers()
+
+            data = {
+                "version": "1.0",
+                "description": "A simple API built with http.server",
+            }
+            self.wfile.write(json.dumps(data).encode("utf-8"))
+            self.wfile.flush()
+
         else:
             """unknown endpoints handling"""
             self.send_response(404)
             self.send_header("content-type", "text/plain")
             self.end_headers()
 
-            message = "404 Not Found: no '{}' endpoint".format(self.path)
+            message = "Endpoint not found"
             self.wfile.write(message.encode("utf-8"))
             self.wfile.flush()
+
 
 with socketserver.TCPServer(("", PORT), MyFirstServer) as httpd:
     print("Serving on PORT {}".format(PORT))
