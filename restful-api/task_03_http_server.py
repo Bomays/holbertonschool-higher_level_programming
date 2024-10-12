@@ -35,7 +35,7 @@ class MyFirstServer(http.server.BaseHTTPRequestHandler):
             self.send_header("content-type", "text/plain")
             self.end_headers()
 
-            message = "ok"
+            message = "OK"
             self.wfile.write(message.encode("utf-8"))
             self.wfile.flush()
 
