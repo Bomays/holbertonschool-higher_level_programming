@@ -7,6 +7,8 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
+app.config['JSON_SORT_KEYS'] = False
+"""Disable JSON key sorting as alphabetical"""
 
 users = {
     "jane": {
@@ -26,7 +28,7 @@ users = {
 
 @app.route("/", methods=["GET"])
 def home():
-    return "<p>Welcome to the Flask API!</p>"
+    return "Welcome to the Flask API!"
 
 
 @app.route("/data", methods=["GET"])
@@ -36,7 +38,7 @@ def get_json_data():
 
 @app.route("/status", methods=["GET"])
 def status():
-    return "<p>OK</p>"
+    return "OK"
 
 
 @app.route("/users/<username>", methods=["GET"])
@@ -57,14 +59,16 @@ def add_user():
     if not username:
         return jsonify({"error": "Username is required"}), 400
 
-    users[username] = {
+    new_user_added = {
         "username": username,
         "name": data.get("name"),
         "age": data.get("age"),
         "city": data.get("city"),
     }
 
-    return jsonify({"message": "User added"}), 200
+    users[username] = new_user_added
+
+    return jsonify({"message": "User added", "user": new_user_added}), 200
 
 
 if __name__ == "__main__":
