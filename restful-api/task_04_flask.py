@@ -10,8 +10,8 @@ app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 """Disable JSON key sorting as alphabetical"""
 
-users = {
-    "jane": {
+users = {}
+"""   "jane": {
         "username": "jane",
         "name": "Jane",
         "age": 28,
@@ -22,8 +22,8 @@ users = {
         "name": "John",
         "age": 30,
         "city": "New York"
-    },
-}
+    },"""
+
 
 
 @app.route("/", methods=["GET"])
