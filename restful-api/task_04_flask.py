@@ -36,10 +36,10 @@ def status():
 @app.route("/users/<username>", methods=["GET"])
 def get_user(username):
     """Return the user object for the given username"""
-    profile = users.get(username)
+    user_data = users.get(username)
 
-    if profile:
-        return jsonify(profile)
+    if user_data:
+        return jsonify(user_data)
     else:
         return jsonify({"error": "User not found"})
 
