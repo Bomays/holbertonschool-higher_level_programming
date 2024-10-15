@@ -3,27 +3,16 @@
 
 
 from flask import Flask, jsonify, request
+
 """from collections import OrderedDict"""
 
 app = Flask(__name__)
 
-app.config['JSON_SORT_KEYS'] = False
-"""Disable JSON key sorting as alphabetical"""
+"""app.config['JSON_SORT_KEYS'] = False
+Disable JSON key sorting as alphabetical as OrderedDict"""
+
 
 users = {}
-"""   "jane": {
-        "username": "jane",
-        "name": "Jane",
-        "age": 28,
-        "city": "Los Angeles"
-    },
-    "john": {
-        "username": "john",
-        "name": "John",
-        "age": 30,
-        "city": "New York"
-    },"""
-
 
 
 @app.route("/", methods=["GET"])
@@ -52,7 +41,7 @@ def get_user(username):
     if user:
         return jsonify(user)
     else:
-        return jsonify({"error": "User not found"}), 404
+        return jsonify({"error": "User not found"})
 
 
 @app.route("/add_user", methods=["POST"])
