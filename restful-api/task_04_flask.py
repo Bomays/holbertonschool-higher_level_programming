@@ -48,7 +48,7 @@ def get_user(username):
 def add_user():
     """Add a new user to the dict."""
     data = request.get_json()
-    username = data.get("username")
+    username = data.get(username)
 
     if not username:
         return jsonify({"error": "Username is required"}), 400
