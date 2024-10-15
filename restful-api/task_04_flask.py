@@ -4,12 +4,7 @@
 
 from flask import Flask, jsonify, request
 
-"""from collections import OrderedDict"""
-
 app = Flask(__name__)
-
-"""app.config['JSON_SORT_KEYS'] = False
-Disable JSON key sorting as alphabetical as OrderedDict"""
 
 
 users = {}
