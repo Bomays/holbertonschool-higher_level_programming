@@ -29,14 +29,14 @@ def status():
 
 
 @app.route("/users/<username>", methods=["GET"])
-def get_user(username):
+def user_profile(username):
     """Return the user object for the given username"""
-    user_data = users.get(username)
+    profile = users.get(username)
 
-    if not user_data:
-        return jsonify({"error": "User not found"})
+    if not profile:
+        return jsonify({"error": "User not found"}), 404
     else:
-        return jsonify(user_data)
+        return jsonify(profile)
 
 
 @app.route("/add_user", methods=["POST"])
@@ -47,17 +47,17 @@ def add_user():
 
     if not username:
         return jsonify({"error": "Username is required"}), 400
+    else:
+        user_data = {
+            "username": username,
+            "name": user_data.get("name"),
+            "age": user_data.get("age"),
+            "city": user_data.get("city"),
+        }
 
-    new_user = {
-        "username": username,
-        "name": user_data.get("name"),
-        "age": user_data.get("age"),
-        "city": user_data.get("city"),
-    }
+    users[username] = user_data
 
-    users[username] = new_user
-
-    return jsonify({"message": "User added", "user": new_user}), 201
+    return jsonify({"message": "User added", "user": user_data}), 201
 
 
 if __name__ == "__main__":
