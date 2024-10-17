@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Techniques for API Security and Authentication"""
-
-
 from flask import Flask, jsonify, request
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_httpauth import HTTPBasicAuth
@@ -11,6 +9,7 @@ from flask_jwt_extended import (
     jwt_required,
     get_jwt_identity,
 )
+
 
 """Initializing"""
 app = Flask(__name__)
@@ -32,15 +31,6 @@ users = {
 }
 
 
-@auth.verify_password
-def verify_password(username, password):
-    """HTTPBasicAuth instance to first protect routes"""
-    user = users.get(username)
-    if user and check_password_hash(user["password"], password):
-        return username
-    return None
-
-
 """Public route for 'Welcome' endpoint """
 
 
@@ -48,6 +38,15 @@ def verify_password(username, password):
 def home():
     """function returning welcome message accessing home route"""
     return "Welcome to the Flask API!"
+
+
+@auth.verify_password
+def verify_password(username, password):
+    """HTTPBasicAuth instance to first protect routes"""
+    user = users.get(username)
+    if user and check_password_hash(user["password"], password):
+        return username
+    return None
 
 
 """Protected route with basic authentification required"""
@@ -60,7 +59,7 @@ def basic_protected():
 
 
 """Set secret key and seting up JWT in flask """
-app.config["JWT_SECRET_KEY"] = "JWT_SECRET_KEY"
+app.config["JWT_SECRET_KEY"] = "secret_key"
 jwt = JWTManager(app)
 
 
@@ -74,7 +73,7 @@ def login():
     password = request.json.get("password", None)
 
     if not username or not password:
-        return jsonify({"error": "wrong password or username"}), 401
+        return jsonify({"message": "wrong password or username"}), 400
 
     user = users.get(username)
     if user and check_password_hash(user["password"], password):
@@ -99,7 +98,7 @@ def admin_only():
     current_user = get_jwt_identity()
 
     if current_user not in users:
-        return jsonify({"error": "User not found"}), 401
+        return jsonify({"error": "User not found"}), 40
 
     if users[current_user]["role"] != "admin":
         return jsonify({"error": "Admin access required"}), 403
