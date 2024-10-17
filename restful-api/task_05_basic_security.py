@@ -98,7 +98,7 @@ def admin_only():
     current_user = get_jwt_identity()
 
     if current_user not in users:
-        return jsonify({"error": "User not found"}), 40
+        return jsonify({"error": "User not found"}), 404
 
     if users[current_user]["role"] != "admin":
         return jsonify({"error": "Admin access required"}), 403
@@ -132,4 +132,4 @@ def handle_needs_fresh_token_error(err):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
