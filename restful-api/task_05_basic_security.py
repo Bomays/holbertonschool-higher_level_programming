@@ -59,7 +59,7 @@ def basic_protected():
     return "Basic Auth: Access Granted"
 
 
-"""Set secret key outside the code while seting up JWT in flask """
+"""Set secret key and seting up JWT in flask """
 app.config["JWT_SECRET_KEY"] = "JWT_SECRET_KEY"
 jwt = JWTManager(app)
 
@@ -77,12 +77,14 @@ def login():
         return jsonify({"error": "wrong password or username"}), 401
 
     user = users.get(username)
-
     if user and check_password_hash(user["password"], password):
         access_token = create_access_token(identity=username)
-        return jsonify(access_token=access_token)
+        return jsonify(access_token=access_token), 200
 
     return jsonify({"error": "wrong password or username"}), 401
+
+
+"""Protected route requiring valid JWT token to access """
 
 
 @app.route("/jwt-protected", methods=["GET"])
@@ -97,10 +99,10 @@ def admin_only():
     current_user = get_jwt_identity()
 
     if current_user not in users:
-        return jsonify({"message": "User not found"}), 401
+        return jsonify({"error": "User not found"}), 401
 
     if users[current_user]["role"] != "admin":
-        return jsonify({"message": "Admin access required"}), 403
+        return jsonify({"error": "Admin access required"}), 403
     else:
         return "Admin Access: Granted"
 
