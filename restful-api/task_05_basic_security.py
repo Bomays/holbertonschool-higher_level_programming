@@ -47,7 +47,7 @@ def verify_password(username, password):
 @app.route("/", methods=["GET"])
 def home():
     """function returning welcome message accessing home route"""
-    return "Welcome!"
+    return "Welcome to the Flask API!"
 
 
 """Protected route with basic authentification required"""
