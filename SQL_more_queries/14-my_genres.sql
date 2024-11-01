@@ -1,6 +1,6 @@
 #!/bin/bash
--- 13-count_shows_by_genre.sql
--- Script that list all genres from hbtn_0d_tvshows and displays the number of shows linked to each
+-- 14-my_genres.sql
+-- Script that list all genres of Dexter show
 
 SELECT tv_genres.name FROM tv_genres
 LEFT JOIN tv_show_genres ON tv_genres.id = tv_show_genres.genre_id
