@@ -41,10 +41,11 @@ if __name__ == "__main__":
     ) as db:
 
         with db.cursor() as cursor:
-            query = ("SELECT * FROM states\
+            query = "SELECT * FROM states\
                     WHERE name = '{}'\
-                    ORDER BY states.id ASC".format(argv[4]))
-
+                    ORDER BY states.id ASC".format(argv[4])
             cursor.execute(query)
-            for state in cursor.fetchall():
+
+            states = cursor.fetchall()
+            for state in states:
                 print(state)
