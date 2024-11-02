@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module that lists all the cities from database hbtn_0e_6_usa, 
+Module that lists all the cities from database hbtn_0e_6_usa,
 via MySQLAlchemy
 """
 
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
-    session= Session()
+    session = Session()
 
     for state in session.query(State).order_by(State.id).all():
         print('{}: {}'.format(state.id, state.name))
