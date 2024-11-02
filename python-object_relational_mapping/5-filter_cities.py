@@ -50,5 +50,7 @@ if __name__ == "__main__":
                            ORDER BY cities.id ASC;"""
             cursor.execute(query, (argv[4],))
 
-            for city in cursor.fetchall():
-                print(city)
+            cities = cursor.fetchall()
+            city_names = (name for (name,) in cities)
+            output = ", ".join(city_names)
+            print(output)
