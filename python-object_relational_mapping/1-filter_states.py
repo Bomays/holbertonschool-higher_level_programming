@@ -6,7 +6,6 @@ After connecting to MySQL server running on localhost
 at port 3306 to access database hbtn_0e_0_usa,
 it returns all states with a name starting with N (upper case)
 sorted in ascending order by states.id
-
 NB: cursor.close() and db.close() are ensured
 by using with...as.. statement instead.
 
@@ -45,12 +44,13 @@ def connect_database(username, password, db_name):
 if __name__ == "__main__":
     """Main entry point"""
 
+    with connect_database(argv[1], argv[2], argv[3]) as db:
 
-with connect_database(argv[1], argv[2], argv[3]) as db:
-    with db.cursor() as cursor:
-        cursor.execute(
-            "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC"
-        )
+        # ensuring query executes well  by using cursor object
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM states\
+                       WHERE name LIKE'N%'\
+                       ORDER BY states.id ASC")
 
         for state in cursor.fetchall():
             print(state)
