@@ -47,10 +47,10 @@ if __name__ == "__main__":
     with connect_database(argv[1], argv[2], argv[3]) as db:
 
         # ensuring query executes well  by using cursor object
-        cursor = db.cursor()
-        cursor.execute("SELECT * FROM states\
-                       WHERE name LIKE'N%'\
-                       ORDER BY states.id ASC")
+        with db.cursor() as cursor:
+            cursor.execute("SELECT * FROM states\
+                        WHERE name LIKE 'N%'\
+                        ORDER BY states.id ASC")
 
-        for state in cursor.fetchall():
-            print(state)
+            for state in cursor.fetchall():
+                print(state)
