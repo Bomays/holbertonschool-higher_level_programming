@@ -11,6 +11,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
     """
     Class that represents a state in the states table
@@ -21,8 +22,7 @@ class State(Base):
                 and set as primary key, cannot be NUll
         name (str): name of the stated, cannot be NULL
     """
-    
     __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
-    name =  Column(String(128), nullable=False)
+    name = Column(String(128), nullable=False)
