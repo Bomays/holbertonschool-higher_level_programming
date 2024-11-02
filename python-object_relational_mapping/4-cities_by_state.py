@@ -3,7 +3,7 @@
 Module that lists all the cities from the database hbtn_0e_4_usa
 
 After connecting to MySQL server running on localhost
-at port 3306 to access database hbtn_0e_0_usa,
+at port 3306 to access database hbtn_0e_4_usa,
 it returns all the cities present in the DB.
 
 Usage:
@@ -39,7 +39,10 @@ if __name__ == "__main__":
     ) as db:
 
         with db.cursor() as cursor:
-            cursor.execute("""SELECT * FROM cities ORDER BY cities.id ASC""")
+            cursor.execute("""SELECT cities.id, cities.name, states.name
+                           AS state_name FROM cities
+                           JOIN states ON cities.state_id = states.id
+                           ORDER BY cities.id ASC;""")
 
             for city in cursor.fetchall():
                 print(city)
