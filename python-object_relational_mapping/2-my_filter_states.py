@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """
-Module that retrieves the state name which is safe of any MySQL injections
+Module that retrieves a particular state name
 
 After connecting to MySQL server running on localhost
 at port 3306 to access database hbtn_0e_0_usa,
-it returns the state name wich is safe of any MySQL injections
+it returns the state name we search as fourth argument
 
 Usage:
     python3 2-my_filter_states.py
-    <mysql_username> <mysql_password> <database_name> <safe_state_name>
+    <mysql_username> <mysql_password> <database_name> <state_name_searched>
 
 Args :
     mysql_username: argv[1]
@@ -17,7 +17,8 @@ Args :
     state_name_searched: argv[4]
 
 Returns:
-    Prints state which is safe of any MySQL injections
+    Prints a particular state input as fourth argument using
+    .format for the query
 """
 
 import MySQLdb
