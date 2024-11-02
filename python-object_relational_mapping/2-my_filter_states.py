@@ -44,7 +44,12 @@ if __name__ == "__main__":
 
     with connect_database(argv[1], argv[2], argv[3]) as db:
         with db.cursor() as cursor:
-            cursor.execute("SELECT * FROM states WHERE name = %s", (argv[4],))
+            query = "SELECT * FROM states\
+                    WHERE name = '{}'\
+                    ORDER BY states.id ASC".format(
+                argv[4]
+            )
 
+            cursor.execute(query)
             for state in cursor.fetchall():
                 print(state)
