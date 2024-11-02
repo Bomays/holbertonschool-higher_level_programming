@@ -43,7 +43,7 @@ if __name__ == "__main__":
         with db.cursor() as cursor:
             query = """SELECT * FROM states
                     WHERE name = '{:s}'
-                    COLLATE latin1_general_cs
+                    COLLATE utf8mb4_bin
                     ORDER BY states.id ASC""".format(argv[4])
             cursor.execute(query)
 
