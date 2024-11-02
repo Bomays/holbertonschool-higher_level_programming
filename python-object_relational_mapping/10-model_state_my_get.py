@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module that lists all State objects that contains the letter 'a'
+Module that print State object with the name passed as argument
 from database hbtn_0e_6_usa, via MySQLAlchemy
 """
 
@@ -17,6 +17,7 @@ if __name__ == "__main__":
     username = argv[1]
     password = argv[2]
     database_name = argv[3]
+    state_name_to_search = argv[4]
 
     engine = create_engine(
         "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
@@ -28,10 +29,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(
-        State.name.like('%a%')).order_by(State.id).all()
+    state = session.query(State).filter(State.name == state_name_to_search).first()
 
-    for state in states:
+    if state is None:
+        print("Not found")
+    else:
         print("{}: {}".format(state.id, state.name))
 
     session.close()
