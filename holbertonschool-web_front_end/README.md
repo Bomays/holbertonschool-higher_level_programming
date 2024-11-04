@@ -3,7 +3,7 @@
 $~$
 
 <p align="center">
-<img src="https://github.com/Bomays/holbertonschool-higher_level_programming/blob/c7834704b8a7f275f0e584806d938d1ac488ec7b/holbertonschool-web_front_end/HTML5.png" alt="HTML5" width="200"/>
+<img src="https://github.com/Bomays/holbertonschool-higher_level_programming/blob/c7834704b8a7f275f0e584806d938d1ac488ec7b/holbertonschool-web_front_end/HTML5.png" alt="HTML5" width="150"/>
 </p>
 
 
@@ -12,7 +12,7 @@ $~$
 
 
 ```
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+At the end of this project, you are expected to be able to explain to anyone:
 
 - Which guidelines to follow for HTML
 - How to create the skeleton of an HTML5 page
