@@ -3,7 +3,7 @@
 $~$
 
 <p align="center">
-<img src="https://github.com/Bomays/holbertonschool-higher_level_programming/blob/9441bc9f0855463ba8b62e4f2bc7e68090566757/images/python-logo-only.png" alt="Python" width="100"/>
+<img src="https://github.com/Bomays/holbertonschool-higher_level_programming/blob/c7834704b8a7f275f0e584806d938d1ac488ec7b/holbertonschool-web_front_end/HTML5.png" alt="HTML5" width="100"/>
 </p>
 
 
@@ -29,3 +29,8 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - How to correctly structure an HTML page
 
 ```
+$~$
+
+<p align="center">
+<img src="https://github.com/Bomays/holbertonschool-higher_level_programming/blob/b869dc348baf13a68e95dc7d3e77cfc650c935ea/holbertonschool-web_front_end/Sitemap%20of%20the%20project.png" alt="SiteMap"/>
+</p>
