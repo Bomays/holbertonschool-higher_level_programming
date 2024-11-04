@@ -7,11 +7,7 @@ $~$
 <img src="https://github.com/Bomays/holbertonschool-higher_level_programming/blob/05a7c29e538d625d9eca9b52975f54addee77a70/holbertonschool-web_front_end/images/CSS3.png" alt="HTML5" width="120"/>
 <img src="https://github.com/Bomays/holbertonschool-higher_level_programming/blob/05a7c29e538d625d9eca9b52975f54addee77a70/holbertonschool-web_front_end/images/JS.png" alt="HTML5" width="180"/>
 </p>
-
-
-
+$~$
 
 NB : All the code will be W3C compliant and validate with W3C-Validator
 <a>https://github.com/hs-hq/W3C-Validator<a>
-
-$~$
