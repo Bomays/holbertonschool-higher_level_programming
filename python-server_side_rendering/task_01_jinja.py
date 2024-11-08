@@ -1,6 +1,4 @@
-import json, os
-from flask import Flask, render_template, jsonify
-
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -18,22 +16,6 @@ def about():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
-
-
-@app.route("/items")
-def items():
-    try:
-        with open("items.json") as f:
-            data = json.load(f)
-
-            items = data.get("items", [])
-            return render_template("items.html", items=items)
-
-    except FileNotFoundError:
-        return "Items files not found"
-
-    except json.JSONDecodeError:
-        return "Error decoding JSON"
 
 
 if __name__ == "__main__":
