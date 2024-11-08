@@ -32,17 +32,18 @@ def generate_invitations(template, attendees):
     for index, attendee in enumerate(attendees, start=1):
 
         invitation = template
+        
+        for key in ["name", "event_title", "event_date", "event_location"]:
 
-    for key in ["name", "event_title", "event_date", "event_location"]:
+            placeholder =  '{' + key + '}'
+            value = attendee.get(key, "N/A")
+            invitation = invitation.replace(placeholder, value)
 
-        placeholder =  '{' + key + '}'
-        value = attendee.get(key, "N/A")
-        invitation = invitation.replace(placeholder, value)
+            filename = f"output_{index}.txt"
 
-        filename = f"output_{index}.txt"
+            if os.path.exists(filename):
+                print("{filename} already exists")
+                continue
 
-        if os.path.exists(filename):
-            print("{filename} already exists")
-
-        with open(filename, "w") as file:
-            file.write(invitation)
+            with open(filename, "w") as file:
+                file.write(invitation)
