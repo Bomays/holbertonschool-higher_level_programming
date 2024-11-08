@@ -3,10 +3,11 @@
 
 import os
 
+
 def generate_invitations(template, attendees):
     """Function that generate invitations
-    
-    args: 
+
+    args:
         template (str)
         attendees (list[dict])
     """
@@ -19,7 +20,7 @@ def generate_invitations(template, attendees):
         print(f"Template must be a string, not {type(template).__name__}")
         return
 
-    if not attendees: 
+    if not attendees:
         print("You must fill attendees with a list of dictionnaries")
         return
 
@@ -37,10 +38,10 @@ def generate_invitations(template, attendees):
     for index, attendee in enumerate(attendees, start=1):
 
         invitation = template
-        
+
         for key in ["name", "event_title", "event_date", "event_location"]:
 
-            placeholder =  '{' + key + '}'
+            placeholder = "{" + key + "}"
             value = attendee.get(key, "N/A")
             invitation = invitation.replace(placeholder, str(value))
 
