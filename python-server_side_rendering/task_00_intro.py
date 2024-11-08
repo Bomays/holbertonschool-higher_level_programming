@@ -27,9 +27,11 @@ def generate_invitations(template, attendees):
         print(f"Attendees must be a list, no {type(attendees).__name__}")
         return
 
-    if not all (isinstance(item, dict) for item in attendees):
-        invalid_item = [type(item.__name__ for item in attendees if not isinstance(item, dict))]
-        print("Item in attendees must be a dictionary, not {invalid_item}")
+    invalid_items = [item for item in attendees if not isinstance(item, dict)]
+    print("Item in attendees must be a dictionary")
+
+    if invalid_items:
+        print(f"Items in attendees must be dictionnaries")
         return
 
     for index, attendee in enumerate(attendees, start=1):
