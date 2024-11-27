@@ -1,3 +1,3 @@
-document.getElementById('red_header').onclick = function() {
-    document.querySelector('header').style.color = "#FF0000";
+document.getElementById('red_header').onclick = () => {
+  document.querySelector('header').style.color = '#FF0000';
 };
