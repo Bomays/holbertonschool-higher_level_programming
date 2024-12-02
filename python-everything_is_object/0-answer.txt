@@ -1,1 +1,1 @@
-function print(type)
+type
